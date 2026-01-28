@@ -16,17 +16,9 @@ terraform {
   }
 }
 
-# Provider configuration block
-provider "aws" {
-  region = "us-east-1" # Change to your desired region
-}
+provider "random" {}
 
-# A simple resource: AWS S3 Bucket
-resource "aws_s3_bucket" "example" {
-  bucket = "tfc-github-test-bucket-new-1741" # MUST be globally unique
-  
-  tags = {
-    Name        = "Managed by TFC via GitHub Actions"
-    Environment = "Test"
-  }
+resource "random_pet" "name" {
+  length    = 2
+  separator = "-"
 }
