@@ -9,9 +9,9 @@ terraform {
 
   # This configuration tells Terraform to use the Terraform Cloud backend
   cloud { 
-    organization = "mahima-test"
+    organization = "auth-learning"
     workspaces { 
-      name = "-" 
+      name = "api-test-vcs" 
     } 
   }
 }
