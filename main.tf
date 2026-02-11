@@ -19,6 +19,6 @@ terraform {
 provider "random" {}
 
 resource "random_pet" "name" {
-  length    = 10
+  length    = 10 
   separator = "-"
 }
